@@ -57,12 +57,12 @@ function ChapterSelector({ book }: { book: Book }) {
                 html:
                   history.count === 0
                     ? "첫 기록입니다."
-                    : `<div>읽은 횟수</div><div><strong>${
+                    : `<div>읽은 횟수</div><div style="margin-top: 0.25rem;"><strong>${
                         history.count
-                      }회</strong></div><div style="margin-top: 0.5rem;">기록 일자</div><div><string>${
+                      }회</strong></div><div style="margin-top: 1rem;">기록 일자</div><div style="margin-top: 0.25rem;"><strong>${
                         readDT[0]
                       } ${readDT[1].substring(0, 8)}</strong></div>`,
-                showDenyButton: true,
+                showDenyButton: history.count !== 0,
                 confirmButtonColor: "#3085d6",
                 denyButtonColor: "#d33",
                 denyButtonText: "기록 삭제",
