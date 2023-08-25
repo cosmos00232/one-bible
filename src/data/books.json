@@ -1,0 +1,332 @@
+[
+  {
+    "id": "Gen",
+    "name": "창세기",
+    "length": 50
+  },
+  {
+    "id": "Exo",
+    "name": "출애굽기",
+    "length": 40
+  },
+  {
+    "id": "Lev",
+    "name": "레위기",
+    "length": 27
+  },
+  {
+    "id": "Num",
+    "name": "민수기",
+    "length": 36
+  },
+  {
+    "id": "Deu",
+    "name": "신명기",
+    "length": 34
+  },
+  {
+    "id": "Jos",
+    "name": "여호수아",
+    "length": 24
+  },
+  {
+    "id": "Jdg",
+    "name": "사사기",
+    "length": 21
+  },
+  {
+    "id": "Rut",
+    "name": "룻기",
+    "length": 4
+  },
+  {
+    "id": "1sa",
+    "name": "사무엘상",
+    "length": 31
+  },
+  {
+    "id": "2sa",
+    "name": "사무엘하",
+    "length": 24
+  },
+  {
+    "id": "1ki",
+    "name": "열왕기상",
+    "length": 22
+  },
+  {
+    "id": "2ki",
+    "name": "열왕기하",
+    "length": 25
+  },
+  {
+    "id": "1ch",
+    "name": "역대상",
+    "length": 29
+  },
+  {
+    "id": "2ch",
+    "name": "역대하",
+    "length": 36
+  },
+  {
+    "id": "Ezr",
+    "name": "에스라",
+    "length": 10
+  },
+  {
+    "id": "Neh",
+    "name": "느헤미야",
+    "length": 13
+  },
+  {
+    "id": "Est",
+    "name": "에스더",
+    "length": 10
+  },
+  {
+    "id": "Job",
+    "name": "욥기",
+    "length": 42
+  },
+  {
+    "id": "Psa",
+    "name": "시편",
+    "length": 150
+  },
+  {
+    "id": "Pro",
+    "name": "잠언",
+    "length": 31
+  },
+  {
+    "id": "Ecc",
+    "name": "전도서",
+    "length": 12
+  },
+  {
+    "id": "Sol",
+    "name": "아가",
+    "length": 8
+  },
+  {
+    "id": "Isa",
+    "name": "이사야",
+    "length": 66
+  },
+  {
+    "id": "Jer",
+    "name": "예레미야",
+    "length": 52
+  },
+  {
+    "id": "Lam",
+    "name": "예레미야애가",
+    "length": 5
+  },
+  {
+    "id": "Eze",
+    "name": "에스겔",
+    "length": 48
+  },
+  {
+    "id": "Dan",
+    "name": "다니엘",
+    "length": 12
+  },
+  {
+    "id": "Hos",
+    "name": "호세아",
+    "length": 14
+  },
+  {
+    "id": "Joe",
+    "name": "요엘",
+    "length": 3
+  },
+  {
+    "id": "Amo",
+    "name": "아모스",
+    "length": 9
+  },
+  {
+    "id": "Oba",
+    "name": "오바다",
+    "length": 1
+  },
+  {
+    "id": "Jon",
+    "name": "요나",
+    "length": 4
+  },
+  {
+    "id": "Mic",
+    "name": "미가",
+    "length": 7
+  },
+  {
+    "id": "Nah",
+    "name": "나훔",
+    "length": 3
+  },
+  {
+    "id": "Hab",
+    "name": "하박국",
+    "length": 3
+  },
+  {
+    "id": "Zep",
+    "name": "스바냐",
+    "length": 3
+  },
+  {
+    "id": "Hag",
+    "name": "학개",
+    "length": 2
+  },
+  {
+    "id": "Zec",
+    "name": "스가랴",
+    "length": 14
+  },
+  {
+    "id": "Mal",
+    "name": "말라기",
+    "length": 4
+  },
+  {
+    "id": "Mat",
+    "name": "마태복음",
+    "length": 28
+  },
+  {
+    "id": "Mar",
+    "name": "마가복음",
+    "length": 16
+  },
+  {
+    "id": "Luk",
+    "name": "누가복음",
+    "length": 24
+  },
+  {
+    "id": "John",
+    "name": "요한복음",
+    "length": 21
+  },
+  {
+    "id": "Act",
+    "name": "사도행전",
+    "length": 28
+  },
+  {
+    "id": "Rom",
+    "name": "로마서",
+    "length": 16
+  },
+  {
+    "id": "1co",
+    "name": "고린도전서",
+    "length": 16
+  },
+  {
+    "id": "2co",
+    "name": "고린도후서",
+    "length": 13
+  },
+  {
+    "id": "Gal",
+    "name": "갈라디아서",
+    "length": 6
+  },
+  {
+    "id": "Eph",
+    "name": "에베소서",
+    "length": 6
+  },
+  {
+    "id": "Phi",
+    "name": "빌립보서",
+    "length": 4
+  },
+  {
+    "id": "Col",
+    "name": "골로새서",
+    "length": 4
+  },
+  {
+    "id": "1th",
+    "name": "데살로니가전서",
+    "length": 5
+  },
+  {
+    "id": "2th",
+    "name": "데살로니가후서",
+    "length": 3
+  },
+  {
+    "id": "1ti",
+    "name": "디모데전서",
+    "length": 6
+  },
+  {
+    "id": "2ti",
+    "name": "디모데후서",
+    "length": 4
+  },
+  {
+    "id": "Tit",
+    "name": "디도서",
+    "length": 3
+  },
+  {
+    "id": "Phm",
+    "name": "빌레몬서",
+    "length": 1
+  },
+  {
+    "id": "Heb",
+    "name": "히브리서",
+    "length": 13
+  },
+  {
+    "id": "Jam",
+    "name": "야고보서",
+    "length": 5
+  },
+  {
+    "id": "1pe",
+    "name": "베드로전서",
+    "length": 5
+  },
+  {
+    "id": "2pe",
+    "name": "베드로후서",
+    "length": 3
+  },
+  {
+    "id": "1john",
+    "name": "요한일서",
+    "length": 5
+  },
+  {
+    "id": "2john",
+    "name": "요한이서",
+    "length": 1
+  },
+  {
+    "id": "3john",
+    "name": "요한삼서",
+    "length": 1
+  },
+  {
+    "id": "Jud",
+    "name": "유다서",
+    "length": 1
+  },
+  {
+    "id": "Rev",
+    "name": "요한계시록",
+    "length": 22
+  }
+]
