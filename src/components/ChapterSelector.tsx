@@ -41,7 +41,6 @@ function ChapterSelector({ book }: { book: Book }) {
 
   async function fetchHistoryKeyArray(bookId: string) {
     const historyKeyArray = await getHistoryKeyArrayByBookId(bookId);
-    console.log("historyKeyArray", JSON.stringify(historyKeyArray));
     setHistoryKeyArray(historyKeyArray);
   }
 

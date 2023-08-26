@@ -13,7 +13,6 @@ import { getAuth } from "firebase/auth";
 import History from "../type/History";
 
 export async function getHistoryKeyArrayByBookId(bookId: string) {
-  console.log("bookId", bookId);
   const db = getDatabase();
   const currentUser = getAuth().currentUser;
   if (currentUser) {
@@ -26,7 +25,6 @@ export async function getHistoryKeyArrayByBookId(bookId: string) {
     );
     const snapshot = await get(q);
     const historyArray = snapshot.val();
-    console.log(historyArray);
     return historyArray == null ? [] : Object.keys(historyArray);
   }
   return [];

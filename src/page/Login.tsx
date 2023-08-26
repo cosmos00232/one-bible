@@ -53,7 +53,7 @@ function Login() {
               window.localStorage.setItem("emailForSignIn", email);
             });
 
-            ReactSwal.fire({ html: "이메일을 확인해주세요." });
+            ReactSwal.fire({ html: "이메일로 링크가 발송되었습니다." });
           }}
         >
           login
