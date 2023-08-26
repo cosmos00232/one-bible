@@ -1,7 +1,12 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 import { getAuth, sendSignInLinkToEmail } from "firebase/auth";
-import { useState } from "react";
+
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const ReactSwal = withReactContent(Swal);
 
 const LoginForm = styled.div`
   display: flex;
@@ -47,6 +52,8 @@ function Login() {
             sendSignInLinkToEmail(auth, email, actionCodeSettings).then(() => {
               window.localStorage.setItem("emailForSignIn", email);
             });
+
+            ReactSwal.fire({ html: "이메일을 확인해주세요." });
           }}
         >
           login

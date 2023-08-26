@@ -1,17 +1,18 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import Book from "../type/Book";
 import {
   getHistoryKeyArrayByBookId,
   getHistoryByKey,
   updateHistory,
   clearHistory,
 } from "../store/history.store";
-import { useEffect, useState } from "react";
+
+import Book from "../type/Book";
+import History from "../type/History";
 
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-import History from "../type/History";
 
 const ReactSwal = withReactContent(Swal);
 
