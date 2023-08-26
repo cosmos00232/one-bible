@@ -5,6 +5,7 @@ import Toolbar from "./components/Toolbar";
 
 import bookArrayJson from "./data/books.json";
 import Book from "./type/Book";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   const books = bookArrayJson.map((bookJson) => Book.plainToClass(bookJson));
@@ -14,7 +15,9 @@ function App() {
     <>
       <Toolbar />
       <BookSelector books={books} setBook={setBook} />
-      <ChapterSelector book={book} />
+      <ErrorBoundary>
+        <ChapterSelector book={book} />
+      </ErrorBoundary>
     </>
   );
 }
