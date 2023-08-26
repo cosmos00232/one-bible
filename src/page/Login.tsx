@@ -39,8 +39,8 @@ function Login() {
           onClick={() => {
             const actionCodeSettings = {
               handleCodeInApp: true,
-              // url: "https://one-bible-pwa.web.app",
-              url: "http://localhost:5173",
+              url: "https://one-bible-pwa.web.app",
+              // url: "http://localhost:5173",
             };
 
             const auth = getAuth();
