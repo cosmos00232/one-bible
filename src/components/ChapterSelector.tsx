@@ -25,8 +25,10 @@ const ChapterGridContainer = styled.div`
 
 const ChapterButton = styled.div<{ $hasHistory: boolean }>`
   border: 1px solid #767676;
-  text-align: center;
-  padding: 1rem;
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
   border-radius: 1rem;
   cursor: pointer;
   ${(props) => props.$hasHistory && "background-color: #84cc16;"}
