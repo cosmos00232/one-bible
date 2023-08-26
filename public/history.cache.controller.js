@@ -4,7 +4,7 @@ const CACHE_VERSION = 1;
 
 // Shorthand identifier mapped to specific versioned cache.
 const CURRENT_CACHES = {
-  history: "font-cache-v" + CACHE_VERSION,
+  history: "history-cache-v" + CACHE_VERSION,
 };
 
 broadcast.onmessage = event => {
