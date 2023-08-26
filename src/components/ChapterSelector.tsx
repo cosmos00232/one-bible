@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 import Book from "../type/Book";
 import {
-  clearHistory,
-  getHistoryByBook,
+  getHistoryKeyArrayByBookId,
   getHistoryByKey,
   updateHistory,
+  clearHistory,
 } from "../store/history.store";
-import History from "../type/History";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import History from "../type/History";
 
 const ReactSwal = withReactContent(Swal);
 
@@ -36,7 +36,18 @@ const ChapterButton = styled.div<{ $hasHistory: boolean }>`
 
 function ChapterSelector({ book }: { book: Book }) {
   const range = (n: number) => [...Array(n).keys()];
-  const [historyArray, setHistoryArray] = useState(getHistoryByBook(book.id));
+  const [historyKeyArray, setHistoryKeyArray] = useState([] as string[]);
+
+  async function fetchHistoryKeyArray(bookId: string) {
+    const historyKeyArray = await getHistoryKeyArrayByBookId(bookId);
+    console.log("historyKeyArray", JSON.stringify(historyKeyArray));
+    setHistoryKeyArray(historyKeyArray);
+  }
+
+  useEffect(() => {
+    fetchHistoryKeyArray(book.id);
+  }, [book]);
+
   return (
     <ChapterGridContainer>
       {range(book.length).map((index) => {
@@ -44,15 +55,13 @@ function ChapterSelector({ book }: { book: Book }) {
         return (
           <ChapterButton
             key={key}
-            onClick={() => {
-              const historyJson = getHistoryByKey(key);
-
-              const history =
-                historyJson === null
-                  ? new History()
-                  : History.plainToClass(JSON.parse(historyJson));
-
-              const readDT = history.read_at.split("T");
+            onClick={async () => {
+              const history = await getHistoryByKey(key);
+              const readAt = new Date((history as History).read_at);
+              readAt.setMinutes(
+                readAt.getMinutes() - readAt.getTimezoneOffset()
+              );
+              const readDT = readAt.toISOString().split("T");
 
               ReactSwal.fire({
                 title: "기록 하시겠습니까?",
@@ -69,18 +78,18 @@ function ChapterSelector({ book }: { book: Book }) {
                 denyButtonColor: "#d33",
                 denyButtonText: "기록 삭제",
                 confirmButtonText: "새로 기록하기",
-              }).then((result) => {
+              }).then(async (result) => {
                 if (result.isConfirmed) {
                   history.count++;
-                  updateHistory(key, JSON.stringify(history));
-                  setHistoryArray(getHistoryByBook(book.id));
+                  await updateHistory(key, JSON.stringify(history));
+                  await fetchHistoryKeyArray(book.id);
                 } else if (result.isDenied) {
-                  clearHistory(key);
-                  setHistoryArray(getHistoryByBook(book.id));
+                  await clearHistory(key);
+                  await fetchHistoryKeyArray(book.id);
                 }
               });
             }}
-            $hasHistory={historyArray.includes(key)}
+            $hasHistory={historyKeyArray.includes(key)}
           >
             {index + 1}장
           </ChapterButton>

@@ -1,7 +1,7 @@
 export default class History {
   public count: number = 0;
 
-  public read_at: string = new Date().toISOString();
+  public read_at: number = new Date().getTime();
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public static plainToClass(json: any): History {
